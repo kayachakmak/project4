@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import Form from './components/Form/Form'
-
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/Form/Form";
+import { uid } from "uid";
 
 function App() {
-  const [activities,setActivites] = useState({})
+  const [activities, setActivites] = useState([]);
+
+  function handleAddActivity(newActivity) {
+    setActivites([{ ...newActivity, id: uid() }, { ...activities }]);
+  }
   return (
     <>
-      <Form onAddActivity={}/>
+      <Form onAddActivity={handleAddActivity} />
     </>
-  )
+  );
 }
 
-
-export default App
+export default App;
