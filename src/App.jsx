@@ -12,29 +12,33 @@ function App() {
 
   const URL = "https://example-apis.vercel.app/api/weather";
 
-  useEffect(() => {
-    async function Fetch() {
-      try {
-        const response = await fetch(URL);
-        const data = await response.json();
-        console.log(data);
-        setWeather(data);
-      } catch (error) {
-        console.log(error);
-      }
+  async function fetchWeatherData() {
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
+      console.log(data);
+      setWeather(data);
+    } catch (error) {
+      console.log(error);
     }
-    Fetch();
+  }
+
+  useEffect(() => {
+    fetchWeatherData();
+    const intervalID = setInterval(() => {
+      fetchWeatherData();
+    }, 5000);
+    return () => {
+      clearInterval(intervalID);
+    };
   }, []);
 
-  
   function handleAddActivity(newActivity) {
     setActivites([{ ...newActivity, id: uid() }, ...activities]);
   }
 
   function handleDeleteActivity(id) {
-    setActivites( 
-      activities.filter( (activity) => activity.id!==id)
-    )
+    setActivites(activities.filter((activity) => activity.id !== id));
   }
 
   const filteredActivities = activities.filter((activity) => {
