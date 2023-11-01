@@ -13,12 +13,13 @@ function App() {
     setActivites([{ ...newActivity, id: uid() }, ...activities]);
   }
 
-
-  activities.filter((activity) => activity.isForGoodweather.checked === isGoodweather && activity )
+  
+   const filteredActivities= activities.filter((activity) => {
+    return activity.isForGoodweather === isGoodweather})
 
   return (
     <>
-      <List activities={activities} isGoodweather={isGoodweather} />
+      <List activities={filteredActivities} isGoodweather={isGoodweather} />
       <Form onAddActivity={handleAddActivity} />
     </>
   );
