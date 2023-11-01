@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 export default function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();

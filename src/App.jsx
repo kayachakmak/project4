@@ -6,9 +6,13 @@ import useLocalStorage from "use-local-storage";
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import useFetchWeatherData from "./hooks/useFetchWeatherData";
+import { defaultActivities } from "./assets/DefaultActivities";
 
 function App() {
-  const [activities, setActivites] = useLocalStorage("activities", []);
+  const [activities, setActivites] = useLocalStorage(
+    "activities",
+    defaultActivities
+  );
   const [weather, setWeather] = useState({});
 
   useFetchWeatherData({ setData });
