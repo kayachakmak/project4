@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 /* eslint-disable react/prop-types */
-export default function List({ activities, isGoodWeather }) {
+export default function List({ activities, isGoodWeather,onDeleteActivity}) {
   return (
     <Fragment>
       <p>{isGoodWeather ? "Weather is good" : "Weather is shitty"} </p>
@@ -9,6 +9,8 @@ export default function List({ activities, isGoodWeather }) {
         {activities.map((activity) => (
           <li key={activity.id} className="activity">
             {activity.name}
+            <button onClick={()=>onDeleteActivity(activity.id)}>
+            </button>
           </li>
         ))}
       </ul>

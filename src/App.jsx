@@ -26,9 +26,15 @@ function App() {
     Fetch();
   }, []);
 
-  console.log(weather.isGoodWeather);
+  
   function handleAddActivity(newActivity) {
     setActivites([{ ...newActivity, id: uid() }, ...activities]);
+  }
+
+  function handleDeleteActivity(id) {
+    setActivites( 
+      activities.filter( (activity) => activity.id!==id)
+    )
   }
 
   const filteredActivities = activities.filter((activity) => {
@@ -41,6 +47,7 @@ function App() {
       <List
         activities={filteredActivities}
         isGoodWeather={weather.isGoodWeather}
+        onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
     </>
