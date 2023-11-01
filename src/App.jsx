@@ -3,19 +3,18 @@ import Form from "./components/Form/Form";
 import { uid } from "uid";
 import List from "./components/Form/List/List";
 import useLocalStorage from "use-local-storage";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "./components/Header/Header";
-import useFetchWeatherData from "./hooks/fetchWeatherData";
+import useFetchWeatherData from "./hooks/useFetchWeatherData";
 
 function App() {
   const [activities, setActivites] = useLocalStorage("activities", []);
   const [weather, setWeather] = useState({});
 
-  useFetchWeatherData({setData});
-  function setData(data){
-    setWeather(data)
+  useFetchWeatherData({ setData });
+  function setData(data) {
+    setWeather(data);
   }
-
 
   function handleAddActivity(newActivity) {
     setActivites([{ ...newActivity, id: uid() }, ...activities]);
