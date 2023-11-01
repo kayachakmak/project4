@@ -1,6 +1,5 @@
 .weather {
     display: flex;
-    background-color: antiquewhite;
     flex-direction: column;
     width: 250px;
     align-items: center;
@@ -9,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: azure;
     gap: 20px;
     border: 2px solid black;
     width: 200px;

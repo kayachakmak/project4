@@ -10,11 +10,11 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color:var(--main-background-color);
   color:var(--main-text-color);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
   margin: 0;
+  background-color:var(--main-background-color);
 }

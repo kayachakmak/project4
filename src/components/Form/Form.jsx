@@ -1,3 +1,4 @@
+import './Form.css'
 /* eslint-disable react/prop-types */
 
 export default function Form({ onAddActivity }) {
@@ -18,15 +19,18 @@ export default function Form({ onAddActivity }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <legend className="form__title">Add new activity:</legend>
-      <label htmlFor="name"> Name:</label>
+      <label className='form__textInput-label' htmlFor="name"> Name:</label>
       <input className="form__textInput" type="text" name="name" id="name" />
-      <label htmlFor="checkbox">Good-weather activity</label>
-      <input
-        className="form__checkbox"
-        type="checkbox"
-        name="isForGoodweather"
-        id="checkbox"
-      />
+      <section className='form__checkbox'>
+        <label className='form__checkbox__label' htmlFor="checkbox">Good-weather activity:</label>
+        <input
+          className="form__checkbox__box"
+          type="checkbox"
+          name="isForGoodweather"
+          id="checkbox"
+        />
+      </section>
+
       <button className="form__button" type="submit">
         Submit
       </button>
