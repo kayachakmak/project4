@@ -1,6 +1,6 @@
-:root{
-  --main-background-color:rgb(203, 159, 159);
-  --main-text-color:rgb(34, 34, 59);
+:root {
+  --main-background-color: rgb(203, 159, 159);
+  --main-text-color: rgb(34, 34, 59);
 }
 #root {
   box-sizing: border-box;
@@ -9,11 +9,18 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  color:var(--main-text-color);
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--main-text-color);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-body {
+body.rainy {
   margin: 0;
-  background-color:var(--main-background-color);
+  background-image: url("/home/kycakmak/spiced-bootcamp/Projects/Project4/src/assets/images/aesthetic-rain.jpg");
+  background-position: center center;
+}
+
+body.sunny {
+  margin: 0;
+  background-image: url("/home/kycakmak/spiced-bootcamp/Projects/Project4/src/assets/images/beautiful-beach-aerial-view-sea.jpg");
 }

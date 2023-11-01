@@ -16,9 +16,19 @@ function App() {
   );
   const [weather, setWeather] = useState({});
 
+  const body = document.querySelector("body");
+
   useFetchWeatherData({ setData });
   function setData(data) {
     setWeather(data);
+  }
+
+  if (weather.isGoodWeather === true) {
+    body.classList.add("sunny");
+    body.classList.remove("rainy");
+  } else {
+    body.classList.add("rainy");
+    body.classList.remove("sunny");
   }
 
   function handleAddActivity(newActivity) {
