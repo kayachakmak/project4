@@ -1,19 +1,18 @@
-import { Fragment } from "react";
-
 /* eslint-disable react/prop-types */
-export default function List({ activities, isGoodWeather,onDeleteActivity}) {
+export default function List({ activities, onDeleteActivity }) {
   return (
-    <Fragment>
-      <p>{isGoodWeather ? "Weather is good" : "Weather is shitty"} </p>
-      <ul>
-        {activities.map((activity) => (
-          <li key={activity.id} className="activity">
-            {activity.name}
-            <button onClick={()=>onDeleteActivity(activity.id)}>
-            </button>
-          </li>
-        ))}
-      </ul>
-    </Fragment>
+    <ul className="actities">
+      {activities.map((activity) => (
+        <li key={activity.id} className="activities__activity">
+          {activity.name}
+          <button
+            className="activities__activity__deleteButton"
+            onClick={() => onDeleteActivity(activity.id)}
+          >
+            X
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 }
