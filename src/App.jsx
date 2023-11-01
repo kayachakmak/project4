@@ -30,10 +30,13 @@ function App() {
 
   return (
     <>
-      <Header condition={weather.condition} temperature={weather.temperature} />
+      <Header
+        condition={weather.condition}
+        temperature={weather.temperature}
+        isGoodWeather={weather.isGoodWeather}
+      />
       <List
         activities={filteredActivities}
-        isGoodWeather={weather.isGoodWeather}
         onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
