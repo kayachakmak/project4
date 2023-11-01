@@ -7,6 +7,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import useFetchWeatherData from "./hooks/useFetchWeatherData";
 import { defaultActivities } from "./assets/DefaultActivities";
+import AllActivities from "./components/AllActivitiesButton/AllActivities";
 
 function App() {
   const [activities, setActivites] = useLocalStorage(
@@ -44,6 +45,7 @@ function App() {
         onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
+      <AllActivities />
     </>
   );
 }
