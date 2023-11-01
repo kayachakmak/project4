@@ -3,35 +3,18 @@ import Form from "./components/Form/Form";
 import { uid } from "uid";
 import List from "./components/Form/List/List";
 import useLocalStorage from "use-local-storage";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "./components/Header/Header";
+import useFetchWeatherData from "./hooks/useFetchWeatherData";
 
 function App() {
   const [activities, setActivites] = useLocalStorage("activities", []);
   const [weather, setWeather] = useState({});
 
-  const URL = "https://example-apis.vercel.app/api/weather";
-
-  async function fetchWeatherData() {
-    try {
-      const response = await fetch(URL);
-      const data = await response.json();
-      console.log(data);
-      setWeather(data);
-    } catch (error) {
-      console.log(error);
-    }
+  useFetchWeatherData({ setData });
+  function setData(data) {
+    setWeather(data);
   }
-
-  useEffect(() => {
-    fetchWeatherData();
-    const intervalID = setInterval(() => {
-      fetchWeatherData();
-    }, 5000);
-    return () => {
-      clearInterval(intervalID);
-    };
-  }, []);
 
   function handleAddActivity(newActivity) {
     setActivites([{ ...newActivity, id: uid() }, ...activities]);
