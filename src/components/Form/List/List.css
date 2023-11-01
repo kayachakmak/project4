@@ -1,0 +1,16 @@
+.activities {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.activities__activity {
+    background-color: beige;
+    border: 1px solid;
+}
+
+.activities__activity__deleteButton {
+    border: none;
+    background-color: transparent;
+}

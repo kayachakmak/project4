@@ -1,6 +1,18 @@
+:root{
+  --main-background-color:rgb(203, 159, 159);
+  --main-text-color:rgb(34, 34, 59);
+}
 #root {
-  background-color: rgb(146, 93, 93);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+  background-color:var(--main-background-color);
+  color:var(--main-text-color);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {

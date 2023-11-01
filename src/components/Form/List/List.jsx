@@ -1,7 +1,8 @@
+import "./List.css"
 /* eslint-disable react/prop-types */
 export default function List({ activities, onDeleteActivity }) {
   return (
-    <ul className="actities">
+    <ul className="activities">
       {activities.map((activity) => (
         <li key={activity.id} className="activities__activity">
           {activity.name}

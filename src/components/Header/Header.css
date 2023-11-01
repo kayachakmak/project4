@@ -1,8 +1,28 @@
 .weather {
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: column;
+    width: 250px;
+    align-items: center;
+}
+.weather__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 90px;
+    border-radius: 50%;
 }
 
-.weather__condition {
+.weather__info__condition {
+    font-size: 50px;
 }
 
-.weather__temperature {
+.weather__info__temperature {
+    width: 70px;
+}
+
+.weather__statement {
 }
