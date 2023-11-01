@@ -20,7 +20,7 @@ export default function Form({ onAddActivity }) {
     <form className="form" onSubmit={handleSubmit}>
       <legend className="form__title">Add new activity:</legend>
       <label className='form__textInput-label' htmlFor="name"> Name:</label>
-      <input className="form__textInput" type="text" name="name" id="name" />
+      <input className="form__textInput" type="text" name="name" id="name" required/>
       <section className='form__checkbox'>
         <label className='form__checkbox__label' htmlFor="checkbox">Good-weather activity:</label>
         <input
