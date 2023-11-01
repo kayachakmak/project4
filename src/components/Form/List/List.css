@@ -1,0 +1,25 @@
+.activities {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+    position: relative;
+    right: 15px
+}
+
+.activities__activity {
+    background-color: beige;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    width: 200px;
+}
+
+.activities__activity__deleteButton {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

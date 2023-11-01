@@ -1,0 +1,29 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap:5px;
+}
+.form__title {
+   align-self: center;
+   margin-bottom: 5px;
+}
+.form__textInput {
+
+}
+.form__textInput-label {
+
+}
+
+.form__checkbox {
+
+}
+.form__checkbox__label {
+
+}
+.form__checkbox__box {
+
+}
+.form__button {
+
+}
