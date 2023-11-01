@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./AllActivities.css";
-import { defaultActivities } from "../../assets/DefaultActivities";
 // https://www.geeksforgeeks.org/how-to-create-a-toggle-switch-in-react-as-a-reusable-component/
-export default function AllActivities() {
+export default function AllActivities({ activities }) {
   const [isAll, setIsAll] = useState(false);
 
   function handleShowAll() {
@@ -27,7 +26,7 @@ export default function AllActivities() {
       </div>
       <ul className="activities">
         {isAll &&
-          defaultActivities.map((activity) => (
+          activities.map((activity) => (
             <li key={activity.id} className="activities__activity">
               {activity.name}
             </li>

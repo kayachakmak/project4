@@ -45,7 +45,7 @@ function App() {
         onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
-      <AllActivities />
+      <AllActivities activities={activities} />
     </>
   );
 }
