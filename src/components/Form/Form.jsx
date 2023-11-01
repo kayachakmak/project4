@@ -3,6 +3,9 @@ export default function Form({onAddActivity}) {
         event.preventDefault()
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
+        // set checkbox value to true/false instead of 'on':
+        !data.isForGoodweather ? Object.assign(data, {isForGoodweather: false}) :data.isForGoodweather=true ;
+    
         onAddActivity(data)
         
         event.target.reset()
