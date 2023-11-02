@@ -1,29 +1,28 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    gap:5px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 5px;
 }
 .form__title {
-   align-self: center;
-   margin-bottom: 5px;
+  font-weight: bolder;
+  color: rgb(5, 5, 5);
+  align-self: center;
+  margin-bottom: 5px;
 }
-.form__textInput {
 
+.form__textInput {
 }
 .form__textInput-label {
-
+  color: beige;
 }
 
 .form__checkbox {
-
 }
 .form__checkbox__label {
-
+  color: beige;
 }
 .form__checkbox__box {
-
 }
 .form__button {
-
 }

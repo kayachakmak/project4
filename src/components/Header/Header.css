@@ -1,28 +1,39 @@
 .weather {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
 }
 .weather__info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: azure;
-    gap: 20px;
-    border: 2px solid black;
-    width: 200px;
-    height: 90px;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+  gap: 20px;
+  border: 2px solid black;
+  width: 200px;
+  height: 90px;
+  border-radius: 50%;
 }
 
 .weather__info__condition {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .weather__info__temperature {
-    width: 70px;
+  width: 70px;
 }
 
 .weather__statement {
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+  color: rgb(247, 195, 76);
+  background-color: rgba(58, 48, 48, 0.479);
+}
+
+.weather__statement.sunny {
+  font-weight: bold;
+  color: rgb(233, 221, 221);
+  text-align: center;
 }
