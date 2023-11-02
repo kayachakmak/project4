@@ -16,11 +16,11 @@
 
 body.rainy {
   margin: 0;
-  background-image: url("/home/kycakmak/spiced-bootcamp/Projects/Project4/src/assets/images/aesthetic-rain.jpg");
+  background-image: url("./assets/images/aesthetic-rain.jpg");
   background-position: center center;
 }
 
 body.sunny {
   margin: 0;
-  background-image: url("/home/kycakmak/spiced-bootcamp/Projects/Project4/src/assets/images/beautiful-beach-aerial-view-sea.jpg");
+  background-image: url("./assets/images/beautiful-beach-aerial-view-sea.jpg");
 }
