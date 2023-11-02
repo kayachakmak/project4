@@ -17,6 +17,7 @@ function App() {
   const [weather, setWeather] = useState({});
 
   const body = document.querySelector("body");
+  const statement = document.querySelector(".weather__statement");
 
   useFetchWeatherData({ setData });
   function setData(data) {
@@ -26,6 +27,7 @@ function App() {
   if (weather.isGoodWeather === true) {
     body.classList.add("sunny");
     body.classList.remove("rainy");
+    statement.classList.add("sunny");
   } else {
     body.classList.add("rainy");
     body.classList.remove("sunny");
